@@ -1,15 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
 
 import todosData from './data/todoItems';
 import TodoItem from './components/TodoItem';
 
-function App() {
-  return (
-    <div className="App">
-      <TodoItem />
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      // Empty for now
+    }
+  }
+  render() {
+    return (
+      <div className="App">
+        <TodoItem />
+      </div>
+    );
+  }
 }
 
 export default App;
