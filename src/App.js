@@ -9,29 +9,25 @@ class App extends Component {
     this.state = {
       todos: todosData
     }
-    this.handleChange = this.handleChange.bind(this)
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange() {
+  handleChange(id) {
     this.setState(prevState => {
-      return (
-        !prevState.todos.completed
-      )
+      const updatedTodos = prevState.todos.map(task => {
+        if (task.id === id) {
+          task.completed = !task.completed
+        }
+        return task
+      })
+      return {
+        todos: updatedTodos
+      }
     })
-    console.log("Test")
   }
 
   render() {
-    const todosItems = this.state.todos.map(task => {
-      return (
-        <TodoItem 
-          key={task.id}
-          text={task.text}
-          completed={task.completed}
-          onChange={this.handleChange}
-        />
-      )
-    })
+    const todosItems = this.state.todos.map(task => <TodoItem key={task.id} task={task} handleChange={this.handleChange}/>)
 
     return (
       <div className="App">
