@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 
+import todosData from './data/todoItems';
 import TodoItem from './components/TodoItem';
 
 function App() {
