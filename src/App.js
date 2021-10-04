@@ -7,13 +7,22 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      // Empty for now
+      todos: todosData
     }
   }
   render() {
+    const todosItems = this.state.todos.map(task => {
+      return (
+        <TodoItem 
+          key={task.id}
+          text={task.text}
+        />
+      )
+    })
+
     return (
       <div className="App">
-        <TodoItem />
+        {todosItems}
       </div>
     );
   }
