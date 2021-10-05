@@ -29,8 +29,22 @@ class App extends Component {
   render() {
     const todosItems = this.state.todos.map(task => <TodoItem key={task.id} task={task} handleChange={this.handleChange}/>)
 
+    let taskCount = 0;
+
+    const completedTasks = this.state.todos.forEach(task => {
+      if(task.completed) {
+        taskCount += 1
+      }
+      return taskCount
+    })
+
+    const taskDisplay = this.state.todos.length === completedTasks ?
+                        "You can relax! Well done!" :
+                        `${this.state.todos.length} more tasks to go!`
+
     return (
-      <div className="container__todo">
+      <div className="container__todo text-center">
+        <h3 className="mb-3">{taskDisplay}</h3>
         {todosItems}
       </div>
     );

@@ -1,8 +1,12 @@
 .container__todo {
   width: max-content;
   margin: 2rem auto;
-  padding: 1rem;
+  padding: 2rem;
 
-  border: 1px solid #cdcdcd;
+  background-color: #344FA1;
+  color: #FFF;
+  text-shadow: 0 0.1rem 0.1rem rgba(10, 10, 10, 0.3);
+
   border-radius: 1rem;
+  box-shadow: 0 0.25rem 0.25rem rgba(10, 10, 10, 0.3);
 }
