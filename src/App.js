@@ -17,6 +17,7 @@ class App extends Component {
       const updatedTodos = prevState.todos.map(task => {
         if (task.id === id) {
           task.completed = !task.completed
+          console.log(task.completed)
         }
         return task
       })
@@ -24,6 +25,7 @@ class App extends Component {
         todos: updatedTodos
       }
     })
+    
   }
 
   render() {
