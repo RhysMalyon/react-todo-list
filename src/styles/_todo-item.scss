@@ -2,7 +2,12 @@
   display: flex;
   margin-left: 1rem;
 
-  h2 {
+  p {
     padding-left: 1rem;
   }
+}
+
+.item__completed {
+  text-decoration: line-through;
+  opacity: 0.3;
 }
