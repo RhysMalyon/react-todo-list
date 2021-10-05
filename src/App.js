@@ -30,7 +30,7 @@ class App extends Component {
     const todosItems = this.state.todos.map(task => <TodoItem key={task.id} task={task} handleChange={this.handleChange}/>)
 
     return (
-      <div className="App">
+      <div className="container__todo">
         {todosItems}
       </div>
     );
