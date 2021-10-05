@@ -1,9 +1,16 @@
 .todo-item {
   display: flex;
   margin-left: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+
+  border: 1px solid #cdcdcd;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.15rem 0.25rem rgba(10, 10, 10, 0.2);
 
   p {
-    padding-left: 1rem;
+    padding: 0 1rem;
+    margin-bottom: 0;
   }
 }
 
