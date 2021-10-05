@@ -31,16 +31,18 @@ class App extends Component {
 
     let taskCount = 0;
 
-    const completedTasks = this.state.todos.forEach(task => {
+    // Calculate number of completed tasks for conditional rendering
+
+    this.state.todos.forEach(task => {
       if(task.completed) {
         taskCount += 1
       }
       return taskCount
     })
 
-    const taskDisplay = this.state.todos.length === completedTasks ?
+    const taskDisplay = this.state.todos.length === taskCount ?
                         "You can relax! Well done!" :
-                        `${this.state.todos.length} more tasks to go!`
+                        `${this.state.todos.length - taskCount} more to go!`
 
     return (
       <div className="container__todo text-center">
